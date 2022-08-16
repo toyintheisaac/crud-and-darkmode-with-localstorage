@@ -26,10 +26,10 @@ submits.addEventListener('submit', function(e){
 
         localStorage.setItem('allLocal', dataStr);
         showListForm();
-        name.value = '';
-        email.value = '';
-        phone.value = '';
-        address.value = '';
+        name = '';
+        email = '';
+        phone = '';
+        address = '';
         document.getElementById('msg').innerHTML = 'Successfully Added';
         displayRecord();
     }
