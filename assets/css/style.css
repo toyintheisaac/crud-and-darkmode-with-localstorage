@@ -1,0 +1,21 @@
+
+:root{
+    --bg-theme:  #fff;
+    --color-theme:#1e1e1e;
+}
+
+
+body{
+    background-color: var(--bg-theme);
+    color: var(--color-theme);
+}
+*{
+    color: var(--color-theme);
+}
+
+
+
+.dark-mode{
+    --bg-theme: #1e1e1e;
+    --color-theme: #fff;
+}
