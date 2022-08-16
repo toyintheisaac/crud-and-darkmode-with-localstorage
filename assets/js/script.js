@@ -1,7 +1,10 @@
+
+
 let showForm = document.getElementById('showForm');
 showForm.addEventListener('click', function(){
     showListForm();
 });
+
 function showListForm(){
     let showForms = document.getElementById('add-new');
     showForms.classList.toggle('d-none');
@@ -80,6 +83,8 @@ function editRecord(id){
     }
     );
 }
+
+
 let editRecordForm = document.getElementById('editRecordForm');
 editRecordForm.addEventListener('submit', function(e){
     e.preventDefault();
@@ -91,8 +96,8 @@ editRecordForm.addEventListener('submit', function(e){
    
     let allLocal = JSON.parse(localStorage.getItem('allLocal')) || [];
     allLocal.forEach(function(item, index){
-        if(index == id){
-        //    alert(address);
+        if(index == id){ 
+            // remove old data with new data
             item.name = name;
             item.email = email;
             item.phone = phone;
@@ -103,19 +108,19 @@ editRecordForm.addEventListener('submit', function(e){
     let dataStr = JSON.stringify(allLocal);
     localStorage.setItem('allLocal', dataStr);
     displayRecord();
-    name = '';
-    email = '';
-    phone = '';
-    address = '';
+        name = '';
+        email = '';
+        phone = '';
+        address = '';
     document.getElementById('msg').innerHTML = 'Edit Successfully';
+    // hide the edit record Row
     document.querySelector('#editRecords').classList.add('d-none');
 }
 );
     
     
     
-    
-    //let getLocalStorage = localStorage.getItem('allLocal');
+     
  
  
 
@@ -138,8 +143,7 @@ modeSwitch.addEventListener('click', function(){
     let darkModes = JSON.parse(localStorage.getItem('darkMode')) || false;
     let modeSwitchButton = document.getElementById('modeSwitch');
     if(darkModes == true){
-        modeSwitchButton.setAttribute('checked', 'checked');
-      //  document.body.classList.toggle('dark-mode');
+        modeSwitchButton.setAttribute('checked', 'checked'); 
         document.body.classList.add('dark-mode');
     }else{
         modeSwitchButton.removeAttribute('checked');
@@ -147,4 +151,5 @@ modeSwitch.addEventListener('click', function(){
     }
 }
 checkMode(); 
+
  /* END Function To Change Mode */
