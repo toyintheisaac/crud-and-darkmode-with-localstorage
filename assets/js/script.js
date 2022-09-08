@@ -1,4 +1,4 @@
-
+"use strict";
 
 let showForm = document.getElementById('showForm');
 showForm.addEventListener('click', function(){
@@ -117,11 +117,6 @@ editRecordForm.addEventListener('submit', function(e){
     document.querySelector('#editRecords').classList.add('d-none');
 }
 );
-    
-    
-    
-     
- 
  
 
 
